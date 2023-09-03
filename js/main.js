@@ -39,7 +39,7 @@ let liArray = Array.from(li)
 for (var i = 0; i < liArray.length; i++) {
     liArray[i].onclick = function () {
         currentSlide = parseInt(this.getAttribute('data-index'));
-        landing.style.backgroundImage = `url(${imgArray[parseInt(this.getAttribute('data-index'))]})`
+        landing.style.backgroundImage = `url("${imgArray[parseInt(this.getAttribute('data-index'))]}")`
         theChecker();
     }
   }
@@ -126,7 +126,6 @@ window.onscroll = () => {
 
 function statsCount (el) {
     let goal = el.dataset.goal;
-    console.log(goal);
     let count = setInterval(() => {
         el.textContent++;
         if (el.textContent == goal) {
