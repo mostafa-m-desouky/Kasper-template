@@ -9,7 +9,7 @@ allLis.forEach (function (ele) {
 })
 
 let landing = document.querySelector(".landing")
-let imgArray = ["../image/landing-2.jpg", "../image/landing.jpg", "../image/landing-3.jpg"];
+let imgArray = ["image/landing-2.jpg", "image/landing.jpg", "image/landing-3.jpg"];
 let prevBtn = document.querySelector("#left");
 let nextBtn = document.querySelector("#right");
 let currentSlide = 1;
@@ -39,7 +39,7 @@ let liArray = Array.from(li)
 for (var i = 0; i < liArray.length; i++) {
     liArray[i].onclick = function () {
         currentSlide = parseInt(this.getAttribute('data-index'));
-        landing.style.backgroundImage = `url("${imgArray[parseInt(this.getAttribute('data-index'))]}")`
+        landing.style.backgroundImage = `url(${imgArray[parseInt(this.getAttribute('data-index'))]})`
         theChecker();
     }
   }
